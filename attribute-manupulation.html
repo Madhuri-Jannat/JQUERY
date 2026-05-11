@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>attribute</title>
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <h3>Welcome to The New Page</h3>
+      <a href="#" target="_blank">W3_school</a>
+      <br />
+      <br />
+
+      <img id="img" src="image/historical-place.jpg" alt="" width="250px" /> <br />
+      <br />
+      <button id="btn">change size</button>
+    </div>
+    <hr />
+    <input type="checkbox" id="check" />
+    <button id="btn2">check</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#btn").click(function () {
+          $("#img").attr("width", "300px");
+        });
+
+        $("#btn2").click(function () {
+          $("#check").prop("checked", true);
+        });
+        
+      });
+
+      $("a").attr("href", "https://www.w3schools.com/");
+
+      $("a").removeAttr("target");
+    </script>
+  </body>
+</html>
